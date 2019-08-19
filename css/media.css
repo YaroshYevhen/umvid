@@ -1,0 +1,12 @@
+@media (min-width: 992px) {
+  .standart-btn:hover {
+    box-shadow: 0px 3px 25px 0px rgba(35, 236, 185, 0.4);
+  }
+  .nav__item:hover,
+  .header__tel:hover {
+    color: #23ecb9;
+  }
+  .main-screen__consultation:hover {
+    color: #fff;
+  }
+}
