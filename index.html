@@ -5,50 +5,64 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<title>Системы видеонаблюдения</title>
 	<link rel="stylesheet" href="css/my-bootstrap.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
 	<header class="header d-flex align-items-center justify-content-between">
 		<img src="img/logo.png" alt="logo" class="logo">
-		<nav class="nav ml-auto">
-			<ul class="d-flex justify-content-lg-between">
-				<li class="nav__li"><a href="#" class="nav__item">Видеоаналитика</a></li>
-				<li class="nav__li"><a href="#" class="nav__item">услуги</a></li>
-				<li class="nav__li"><a href="#" class="nav__item">сертификаты</a></li>
-				<li class="nav__li"><a href="#" class="nav__item">отзывы</a></li>
-				<li class="nav__li"><a href="#" class="nav__item">глоссарий</a></li>
-				<li class="nav__li"><a href="#" class="nav__item">расчет стоимости</a></li>
-				<li class="nav__li"><a href="#" class="nav__item">контакты</a></li>
+		<div class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<nav class="nav">
+			<ul class="d-flex justify-content-lg-between flex-wrap">
+				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".analitics">Видеоаналитика</span></li>
+				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".services">услуги</span></li>
+				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".sertificates">сертификаты</span></li>
+				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".testimonials">отзывы</span></li>
+				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".glossary">глоссарий</span></li>
+				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".price">расчет стоимости</span></li>
+				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".contacts">контакты</span></li>
 			</ul>
 		</nav>
 		<a href="tel:+7 (495) 005-80-90" class="header__tel ml-auto">+7 (495) 005-80-90</a>
-		<button class="standart-btn header-btn scroll-btn small">расчет стоимости</button>
+		<button class="standart-btn header-btn scroll-btn small" data-scroll=".price">расчет стоимости</button>
 	</header>
 	<main>
 		<section class="main-screen" style="background-image: url(img/main-background.jpg);">
 			<div class="container">
 				<h1 class="main-screen__title title">Устанавливаем системы видеонаблюдения <br> под ключ</h1>
 				<p>Внедряем систему видеоаналитики, с помощью которой следить за объектом максимально просто</p>
-				<p class="font-weight-bold">Ответьте на 5 простых вопросов и рассчитайте стоимость <br> видеонаблюдения именно для вас</p>
-				<button class="standart-btn scroll-btn">рассчитать стоимость</button>
-				<span class="main-screen__consultation">заказать бесплатную консультацию</span>
+				<p class="font-weight-bold">Ответьте на 5 простых вопросов и рассчитайте стоимость видеонаблюдения именно для вас</p>
+				<button class="standart-btn scroll-btn" data-scroll=".price">рассчитать стоимость</button>
+				<span class="main-screen__consultation modal-btn text-center text-md-left" role="button" data-target="consultation">заказать бесплатную консультацию</span>
 			</div>
 		</section>
 		<section class="analitics">
 			<div class="container">
 				<h1 class="title-l">Видеоаналитика</h1>
-				<p class="text-center">Наши клиенты имеют доступ к <strong>уникальной технологии отслеживания событий</strong>, получая уведомления на свой смартфон обо всех подозрительных ситуациях. При этом вы прямо с телефона можете следить за всем происходящим с любой точки мира.</p>
+				<p class="text-center analitics__text">Наши клиенты имеют доступ к <strong>уникальной технологии отслеживания событий</strong>, получая уведомления на свой смартфон обо всех подозрительных ситуациях. При этом вы прямо с телефона можете следить за всем происходящим с любой точки мира.</p>
 				<div class="analitics-container d-flex align-items-center flex-xl-column flex-wrap">
 					<div class="analitics__item d-flex align-items-center justify-content-end">
 						<span class="analitics__name text-xl-right">Движение</span>
 						<div class="analitics__icon d-flex justify-content-center align-items-center"><img src="img/analitics-1.svg" alt="" aria-hidden="true"></div>
+						<div class="analitics__tooltip">
+							<h2>Движение</h2>
+							<p>При возникновении движения в этих прямоугольниках вам придет уведомление в реальном времени с фото картинкой объекта совершившего движение в выделенных областях.</p>
+						</div>
 					</div>
 					<div class="analitics__item d-flex align-items-center justify-content-end">
 						<span class="analitics__name text-xl-right">Пересечение линий</span>
 						<div class="analitics__icon d-flex justify-content-center align-items-center"><img src="img/analitics-2.svg" alt="" aria-hidden="true"></div>
+						<div class="analitics__tooltip">
+							<h2>Пересечение линий</h2>
+							<p>При возникновении движения в этих прямоугольниках вам придет уведомление в реальном времени с фото картинкой объекта совершившего движение в выделенных областях.</p>
+						</div>
 					</div>
-					<div class="analitics__video" >
+					<div class="analitics__video order-first order-xl-0" >
 						<iframe class="video" width="1189" height="669" src="https://www.youtube.com/embed/yN_HbIW1qHE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						<div class="angle"></div>
 						<div class="angle"></div>
@@ -59,12 +73,20 @@
 					<div class="analitics__item d-flex align-items-center justify-content-end flex-xl-row-reverse">
 						<span class="analitics__name">Вторжение</span>
 						<div class="analitics__icon d-flex justify-content-center align-items-center"><img src="img/analitics-3.svg" alt="" aria-hidden="true"></div>
+						<div class="analitics__tooltip">
+							<h2>Вторжение</h2>
+							<p>При возникновении движения в этих прямоугольниках вам придет уведомление в реальном времени с фото картинкой объекта совершившего движение в выделенных областях.</p>
+						</div>
 					</div>
 					<div class="analitics__item d-flex align-items-center justify-content-end flex-xl-row-reverse">
 						<span class="analitics__name">Звуки</span>
 						<div class="analitics__icon d-flex justify-content-center align-items-center"><img src="img/analitics-4.svg" alt="" aria-hidden="true"></div>
+						<div class="analitics__tooltip">
+							<h2>Звуки</h2>
+							<p>При возникновении движения в этих прямоугольниках вам придет уведомление в реальном времени с фото картинкой объекта совершившего движение в выделенных областях.</p>
+						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</section>
@@ -72,7 +94,7 @@
 			<div class="container">
 				<h1 class="title-l white">услуги</h1>
 				<div class="services-container d-flex">
-					<div class="services-item">
+					<div class="services-item d-flex flex-column">
 						<div class="services-item__title text-center">
 							<h2 class="title-m white">Продажа</h2>
 							<span>(все регионы)</span>
@@ -98,15 +120,382 @@
 							</ul>
 						</div>
 						<p class="services-item__price text-center title">от <span>2990</span> р</p>
-						<div class="services-item__more text-center"><span>Подробнее</span></div>
+						<button class="services-item__more text-center modal-btn" data-target="services"><span>Подробнее</span></button>
+					</div>
+					<div class="services-item d-flex flex-column">
+						<div class="services-item__title text-center">
+							<h2 class="title-m white">Комплектация</h2>
+							<span>(все регионы)</span>
+						</div>
+						<div class="services-item__description">
+							<ul>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Камера цифровая</span>
+								</li>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Подготовка оборудования к самостоятельной установке</span>
+								</li>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Инструкция по установке</span>
+								</li>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Кабельная сборка</span>
+								</li>
+							</ul>
+						</div>
+						<p class="services-item__price text-center title">от <span>3990</span> р</p>
+						<button class="services-item__more text-center modal-btn" data-target="services"><span>Подробнее</span></button>
+					</div>
+					<div class="services-item d-flex flex-column">
+						<div class="services-item__title text-center">
+							<h2 class="title-m white">настройка</h2>
+							<span>(все регионы)</span>
+						</div>
+						<div class="services-item__description">
+							<ul>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Камера цифровая</span>
+								</li>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Подготовка оборудования к самостоятельной установке</span>
+								</li>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Настройка без выезда</span>
+								</li>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Кабельная сборка</span>
+								</li>
+							</ul>
+						</div>
+						<p class="services-item__price text-center title">от <span>4990</span> р</p>
+						<button class="services-item__more text-center modal-btn" data-target="services"><span>Подробнее</span></button>
+					</div>
+					<div class="services-item d-flex flex-column">
+						<div class="services-item__title text-center">
+							<h2 class="title-m white">Продажа</h2>
+							<span>(все регионы)</span>
+						</div>
+						<div class="services-item__description">
+							<ul>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Камера цифровая</span>
+								</li>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Выезд к клиенту</span>
+								</li>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Инструкция по установке</span>
+								</li>
+								<li class="d-flex align-items-center">
+									<img src="img/services-yes.svg" alt="Включено">
+									<span>Кабельная сборка</span>
+								</li>
+							</ul>
+						</div>
+						<p class="services-item__price text-center title">от <span>6990</span> р</p>
+						<button class="services-item__more text-center modal-btn" data-target="services"><span>Подробнее</span></button>
 					</div>
 				</div>
+				<p class="text-center">Ответьте на 5 простых вопросов и получите расчёт стоимости видеонаблюдения именно для вас</p>
+				<button class="services__btn standart-btn mx-auto scroll-btn" data-scroll=".price">рассчитать стоимость</button>
 			</div>
 
 		</section>
+		<section class="glossary">
+			<div class="container">
+				<h1 class="title-l">глоссарий</h1>
+				<p class="text-center glossary__text">Если у вас возникли вопросы или вы хотите лучше понимать, как работает видеонаблюдение, прежде, <br> чем его заказывать - ознакомтесь с данной информацией. Надеемся, это будет вам полезно</p>
+				<div class="slider-container mx-auto">
+					<div class="glossary-item">
+						<div class="glossary-item__img" style="background-image: url(img/glossary-1.jpg);">
+						</div>
+						<h3 class="glossary-item__title title-s text-center">Задачи  видеонаблюдения</h3>
+					</div>
+					<div class="glossary-item">
+						<div class="glossary-item__img" style="background-image: url(img/glossary-2.jpg);">
+						</div>
+						<h3 class="glossary-item__title title-s text-center">Analog против IP камеры</h3>
+					</div>
+					<div class="glossary-item">
+						<div class="glossary-item__img" style="background-image: url(img/glossary-3.jpg);">
+						</div>
+						<h3 class="glossary-item__title title-s text-center">Функция AGC</h3>
+					</div>
+					<div class="glossary-item">
+						<div class="glossary-item__img" style="background-image: url(img/glossary-1.jpg);">
+						</div>
+						<h3 class="glossary-item__title title-s text-center">Задачи  видеонаблюдения</h3>
+					</div>
+					<div class="glossary-item">
+						<div class="glossary-item__img" style="background-image: url(img/glossary-2.jpg);">
+							<span class="angle"></span>
+							<span class="angle"></span>
+							<span class="angle"></span>
+							<span class="angle"></span>
+						</div>
+						<h3 class="glossary-item__title title-s text-center">Analog против IP камеры</h3>
+					</div>
+					<div class="glossary-item">
+						<div class="glossary-item__img" style="background-image: url(img/glossary-3.jpg);">
+							<span class="angle"></span>
+							<span class="angle"></span>
+							<span class="angle"></span>
+							<span class="angle"></span>
+						</div>
+						<h3 class="glossary-item__title title-s text-center">Функция AGC</h3>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="testimonials" style="background-image: url(img/testimonials-bg.jpg);">
+			<div class="container">
+				<h1 class="title-l white">отзывы</h1>
+				<p class="text-center testimonials__text">Убедитесь в качестве наших услуг. Благодарности наших клиентов - лучши показатель качества <br> и наша личная гордость</p>
+				<div class="slider-container mx-auto">
+					<div class="testimonials-item">
+						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
+						</div>
+					</div>
+					<div class="testimonials-item">
+						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
+						</div>
+					</div>
+					<div class="testimonials-item">
+						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
+						</div>
+					</div>
+					<div class="testimonials-item">
+						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
+						</div>
+					</div>
+					<div class="testimonials-item">
+						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
+						</div>
+					</div>
+					<div class="testimonials-item">
+						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="sertificates">
+			<div class="container">
+				<h1 class="title-l">сертификаты</h1>
+				<div class="sertificates-container d-flex flex-column flex-wrap">
+					<img src="img/sertificates-lines.svg" aria-hidden="true" alt="" class="lines">
+					<div class="square">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+					</div>
+					<div class="sertificates__item" style="background-image: url(img/sertificates-1.jpg);">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+					</div>
+					<div class="sertificates__item small" style="background-image: url(img/sertificates-2.jpg);">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot bottom">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+					</div>
+					<div class="sertificates__item small" style="background-image: url(img/sertificates-3.jpg);">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot top">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+					</div>
+					<div class="sertificates__item" style="background-image: url(img/sertificates-4.jpg);">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
+					</div>
+				</div>
+				<button class="standart-btn white mx-auto">смотреть все</button>
+			</div>
+		</section>
+		<section class="price" style="background-image: url(img/price-bg.jpg);">
+			<div class="container position-relative">
+				<h1 class="title-l white">Расчет стоимости</h1>
+				<p class="price__text text-center">Ответьте на несколько простых вопростов и получите расчет стоимости установки <br> видеонаблюдения специально для вас!</p>
+				<div class="calculator">
+					<div class="calculator-container">
+						<div class="calculator-item current">
+							<div class="calculator__count">1 вопрос</div>
+							<h2 class="calculator__title title">За какими зонами, объектами требуется наблюдать?</h2>
+							<div class="calculator-select d-flex flex-wrap">
+								<label><input type="radio" name="object" value="Периматр территории котеджа" checked><div class="checkmark"></div><span>Периматр территории котеджа</span></label>
+								<label><input type="radio" name="object" value="Прилегающая территория"><div class="checkmark"></div><span>Прилегающая территория</span></label>
+								<label><input type="radio" name="object" value="Внутри здания"><div class="checkmark"></div><span>Внутри здания</span></label>
+								<label><input type="radio" name="object" value="В офисе"><div class="checkmark"></div><span>В офисе</span></label>
+								<label><input type="radio" name="object" value="В квартире"><div class="checkmark"></div><span>В квартире</span></label>
+								<label><input type="radio" name="object" value="Еще не знаю"><div class="checkmark"></div><span>Еще не знаю</span></label>
+							</div>
+						</div>
+						<div class="calculator-item">
+							<div class="calculator__count">2 вопрос</div>
+							<h2 class="calculator__title title">Какое качество съемки требуется?</h2>
+							<div class="calculator-select d-flex flex-wrap">
+								<label><input type="radio" name="quality" value="Обнаружение" checked><div class="checkmark"></div><span>Обнаружение</span></label>
+								<label><input type="radio" name="quality" value="Распознавание"><div class="checkmark"></div><span>Распознавание</span></label>
+								<label><input type="radio" name="quality" value="Идентификация"><div class="checkmark"></div><span>Идентификация</span></label>
+								<label><input type="radio" name="quality" value="На каждом участке свои критерии"><div class="checkmark"></div><span>На каждом участке свои критерии</span></label>
+								<label><input type="radio" name="quality" value="Не знаю - доверюсь профессионалам"><div class="checkmark"></div><span>Не знаю - доверюсь профессионалам</span></label>
+							</div>
+						</div>
+						<div class="calculator-item">
+							<div class="calculator__count">3 вопрос</div>
+							<h2 class="calculator__title title">Какой промежуток времени необходимо хранить архив записи?</h2>
+							<div class="calculator-select d-flex flex-wrap">
+								<label><input type="radio" name="storage" value="1 месяц" checked><div class="checkmark"></div><span>1 месяц</span></label>
+								<label><input type="radio" name="storage" value="3 месяца"><div class="checkmark"></div><span>3 месяца</span></label>
+								<label><input type="radio" name="storage" value="6 месяцев"><div class="checkmark"></div><span>6 месяцев</span></label>
+								<label><input type="radio" name="storage" value="1 год"><div class="checkmark"></div><span>1 год</span></label>
+								<label><input type="radio" name="storage" value="Не знаю - доверюсь профессионалам"><div class="checkmark"></div><span>Не знаю - доверюсь профессионалам</span></label>
+							</div>
+						</div>
+						<div class="calculator-item">
+							<div class="calculator__count">4 вопрос</div>
+							<h2 class="calculator__title title">Какой услугой вы хотите воспользоваться?</h2>
+							<div class="calculator-select d-flex flex-wrap">
+								<label><input type="radio" name="service" value="Покупкой" checked><div class="checkmark"></div><span>Покупкой</span></label>
+								<label><input type="radio" name="service" value="Покупкой, проверкой и комплектацией"><div class="checkmark"></div><span>Покупкой, проверкой и комплектацией</span></label>
+								<label><input type="radio" name="service" value="Работы под ключ (выезд только для МО и Москвы)"><div class="checkmark"></div><span>Работы под ключ (выезд только для МО и Москвы)</span></label>
+								<label class="long"><input type="radio" name="service" value="Покупкой, комплектацией и удаленной настройкой или настройкой на месте (выезд только для МО и Москвы)"><div class="checkmark"></div><span>Покупкой, комплектацией и удаленной настройкой или настройкой на месте (выезд только для МО и Москвы)</span></label>
+								<label><input type="radio" name="service" value="Пока не знаю, посоветуйте"><div class="checkmark"></div><span>Пока не знаю, посоветуйте</span></label>
+							</div>
+						</div>
+						<div class="calculator-item">
+							<div class="calculator__count">5 вопрос</div>
+							<h2 class="calculator__title title">Дополнительные комментарии</h2>
+							<div class="calculator-select d-flex flex-wrap">
+								<textarea cols="30" rows="10" placeholder="Опишите дополнительные пожелания"></textarea>
+								<div class="file-btn-container">
+									<div class="selected-files">
+										<div class="selected-files__item d-flex align-items-center">
+											<span class="selected-files__text"></span>
+											<img src="img/x-red.svg" class="selected-files__remove">
+										</div>
+									</div>
+									<input class="input-file d-none" type="file">
+									<button class="file-btn standart-btn black small">прикрепить файл</button>
+									<span class="file-btn__text" style="">(в формате jpeg, png, pdf, doc, txt)</span>
+								</div>
+							</div>
+						</div>
+						<div class="calculator-item">
+							<div class="calculator__count">персональные данные</div>
+							<h2 class="calculator__title title">Оставьте свои персональные данные, чтобы узнать результат расчета</h2>
+							<div class="calculator-select d-flex flex-wrap">
+								<input type="text" placeholder="Имя">
+								<input type="tel" placeholder="Телефон*">
+								<input type="email" placeholder="Почта">
+							</div>
+						</div>
+					</div>
+					<div class="calculator-buttons d-flex justify-content-between">
+							<button class="calculator__btn standart-btn white small prev disabled" >Назад
+							</button>
+							<button class="calculator__btn standart-btn ml-auto white small next">Далее
+							</button>
+							<button class="calculator__submit standart-btn medium disabled">узнать стоимость</button>
+						</div>
+				</div>
+				<img src="img/Calculator-img.png" alt="" aria-hidden="true" class="calculator__img">
+			</div>
+		</section>
+		<section class="contacts">
+			<div class="container">
+				<address class="contacts-address">
+					<h2 class="contacts__title title">Контакты</h2>
+					<ul class="contacts-list">
+						<li class="contacts__item">
+							<img src="img/contacts-1.svg" alt="" aria-hidden="true">
+							<p><span class="d-lg-block">Адрес:</span>
+								<strong class="d-lg-block">г. Москва, Окружной пр-д, д 16, офис 325</strong></p>
+						</li>
+						<li class="contacts__item">
+							<img src="img/contacts-2.svg" alt="" aria-hidden="true">
+							<p><span class="d-lg-block">График работы:</span>
+								<strong class="d-lg-block">ПН-Пт с 9 до 20</strong></p>
+						</li>
+						<li class="contacts__item">
+							<img src="img/contacts-3.svg" alt="" aria-hidden="true">
+							<p><span class="d-lg-block">Телефон:</span>
+								<strong class="d-lg-block"><a href="tel:+7(495)005-80-90">+7(495)005-80-90</a></strong>
+								<strong class="d-lg-block"><a href="tel:+7(964)522-65-90">+7(964)522-65-90</a></strong></p>
+						</li>
+						<li class="contacts__item">
+							<img src="img/contacts-4.svg" alt="" aria-hidden="true">
+							<p><span class="d-lg-block">Почта:</span>
+								<strong class="d-lg-block"><a href="mailto:info@umvid.ru">info@umvid.ru</a></strong></p>
+						</li>
+					</ul>
+				</address>
+			</div>
+		</section>
+		<div class="modal" data-target="services">
+      <div class="modal-container">
+        <div class="modal-close"></div>
+					<h1 class="modal__title title">комплектация</h1>
+					<p class="text-center">(все регионы)</p>
+					<div class="modal__text">
+						<h2>Продажа оборудования по всей России</h2>
+						<p>Стоимость оборудования соответствует цене и гарантийным обязательствам указанной на сайте производителя.</p>
+					</div>
+					<div class="modal__text">
+						<h2>Подготовка оборудования к самостоятельной установке</h2>
+						<ul>
+							<li>проверка/установка прошивок камер и регистратора</li>
+							<li>тестовое включение</li>
+							<li>подробная инструкция по установке и настройке в комплекте прилагается </li>
+							<li>подготовка к отправке транспортной компанией (по всей России) или курьером (Москва и МО).</li>
+						</ul>
+					</div>
+					<div class="modal__text">
+						<h2>Настройка регистратора и камеры</h2>
+						<p>Старовый комплект - 5000 рублей, каждая дополнительная камера + 1000 руб. Пример: 8 камер и регистратор 5000+7*1000 = 12000  руб. </p>
+					</div>
+					<div class="modal__text">
+						<h2>Доставка</h2>
+						<p>500 рублей по Москве, + 30 рублей за 1 км от МКАД, либо оплата транспортной компании заказчиком при получении комплекта оплачивается дополнительно.</p>
+					</div>
+					<div class="modal__text attention">
+						<h2>ВНИМАНИЕ!!!</h2>
+						<p>Окончательное формирование комплекта может быть с добавлением компонентов типа распаячные коробки, гофра, короба и другие расходные материалы. Многое зависит от инфраструктуры самого объекта и эстетичных пожеланий заказчика.</p>
+					</div>
+					<button class="modal__btn standart-btn mx-auto">заказать консультацию по услуге</button>
+      </div>
+    </div>
+    <div class="modal" data-target="consultation">
+      <div class="modal-container">
+        <div class="modal-close"></div>
+					<h1 class="modal__title title">Бесплатная консультация</h1>
+					<input type="text" placeholder="Имя">
+					<input type="tel" placeholder="Телефон*" required>
+					<button class="modal__btn standart-btn mx-auto">заказать консультацию</button>
+					<p class="modal__politics text-center">Нажимая “Заказать консультацию” вы соглашаетесь  с <a href="documents/politics.html">политикой конфиденциальности</a></p>
+      </div>
+    </div>
 	</main>
-	<footer class="footer">
-		
+	<footer class="footer d-flex justify-content-center align-items-center">
+		<span class="footer__item">Все права защищены | 2019</span>
+		<span class="footer__item"><a href="politics.html">Политика конфиденциальности</a></span>
+		<span class="footer__item"><a href="politics.html">Обработка персональных данных</a></span>
 	</footer>
+	<script src="script/jquery.js"></script>
+	<script src="script/slick.min.js"></script>
+	<script src="script/script.js"></script>
 </body>
 </html>
