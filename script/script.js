@@ -29,6 +29,10 @@ APP.$document.ready(function() {
 	APP.wpFile.on('change', function(event) {
 		var fileName = event.target.files[0].name,
 				replace = fileName.replace(/\s/g,'_');
+
+		if($(window).width() < 1200 && $(window).width() >= 768) {
+			$('.file-btn__text').hide();
+		}
 		$('.selected-files').show();
 		$('.selected-files__text').html(replace);
 	});
@@ -36,6 +40,9 @@ APP.$document.ready(function() {
 		$('.selected-files__text').empty();
 		$('.selected-files').hide();
 		APP.wpFile.val('');
+		if($(window).width() < 1200 && $(window).width() >= 768) {
+			$('.file-btn__text').show();
+		}
 	});
 	$('input[type="file"]').change(function(e){
   	var fileName = e.target.files[0].name;
@@ -44,6 +51,12 @@ APP.$document.ready(function() {
   	var currentSlide = $('.calculator-item.current');
 
   	APP.priceBtn.removeClass('disabled');
+  	if($(window).width() >= 1200) {
+  		$('.calculator__img').addClass('vibrate');
+	  	setTimeout(function (){
+			  $('.calculator__img').removeClass('vibrate')
+			}, 1000);
+  	}
 
     if($(this).hasClass('prev')){
     	var prevSlides = currentSlide.prevAll();
@@ -58,7 +71,7 @@ APP.$document.ready(function() {
     }else if($(this).hasClass('next')){
     	var nextSlides = currentSlide.nextAll();
 
-    	if(!($(nextSlides).length - 2)){
+    	if(!($(nextSlides).length - 1)){
     		$(this).addClass('disabled');
     		$('.calculator__submit').removeClass('disabled');
     	}
@@ -96,28 +109,32 @@ APP.$document.ready(function() {
     }
   });
 
+  $(document).keyup(function(e) {
+     if (e.key === "Escape") { 
+        closeModal();
+    }
+	});
+
 	APP.slider.each(function(key, item) {
     var options = {
       slidesToShow: 3,
       slidesToScroll: 3,
       arrows: true,
       dots: true,
-      nextArrow: '<button class="slick-next slick-arrow">><div class="line"></div><div class="line"></div><i class="icon-slider-arrow"></i></button>',
-      prevArrow: '<button class="slick-prev slick-arrow"><<div class="line"></div><div class="line"></div><i class="icon-slider-arrow"></i></button>',
+      nextArrow: '<button class="slick-next slick-arrow"><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="32.5px" height="37.5px"><path fill-rule="evenodd"  stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"d="M15.994,36.481 L0.496,27.484 L0.496,9.490 L15.994,0.494 L31.492,9.490 L31.492,27.484 L15.994,36.481 Z"/></svg><i><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="7px" height="14px"><path fill-rule="evenodd"  fill="rgb(28, 58, 106)"d="M6.575,12.864 L1.186,6.995 L6.575,1.126 L6.053,0.559 L0.131,6.995 L6.053,13.432 L6.575,12.864 Z"/></svg></i><div class="line"></div><div class="line"></div></button>',
+      prevArrow: '<button class="slick-prev slick-arrow"><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="32.5px" height="37.5px"><path fill-rule="evenodd"  stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"d="M15.994,36.481 L0.496,27.484 L0.496,9.490 L15.994,0.494 L31.492,9.490 L31.492,27.484 L15.994,36.481 Z"/></svg><i><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="7px" height="14px"><path fill-rule="evenodd"  fill="rgb(28, 58, 106)"d="M6.575,12.864 L1.186,6.995 L6.575,1.126 L6.053,0.559 L0.131,6.995 L6.053,13.432 L6.575,12.864 Z"/></svg></i><div class="line"></div><div class="line"></div></button>',
       responsive: [{
-        breakpoint: 1140,
+        breakpoint: 1200,
         settings: {
-          slidesToShow: attr('show-tablet'),
-          slidesToScroll: attr('show-tablet'),
-          centerMode: false
+          slidesToShow: 2,
+          slidesToScroll: 2
         },
       },
       {
-        breakpoint: 720,
+        breakpoint: 768,
         settings: {
-          slidesToShow: attr('show-mobile'),
-          slidesToScroll: 1,
-          centerMode: false
+          slidesToShow: 1,
+          slidesToScroll: 1
         },
       }]
     };
@@ -127,5 +144,8 @@ APP.$document.ready(function() {
     };
 
     $(item).slick(options);
+    $('.slick-dots li button').each(function(){
+      $(this).html('<svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" width="10.5px" height="11.5px"><path fill-rule="evenodd"  stroke="rgb(28, 58, 106)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"d="M4.996,10.503 L0.493,8.002 L0.493,2.999 L4.996,0.498 L9.499,2.999 L9.499,8.002 L4.996,10.503 Z"/></svg>');
+    });
   });
 });
