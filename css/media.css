@@ -140,6 +140,94 @@
     line-height: 45px;
     font-size: 16px;
   }
+  @keyframes glide-1 {
+    0% {
+      -webkit-transform: translate(270px, -73px) scale(0.1);
+      transform: translate(270px, -73px) scale(0.1);
+    }
+    25% {
+      -webkit-transform: translate(270px, -38px) scale(0.1);
+      transform: translate(270px, -38px) scale(0.1);
+    }
+    50% {
+      -webkit-transform: translate(0px, -38px) scale(0.1);
+      transform: translate(0px, -38px) scale(0.1);
+    }
+    75% {
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes glide-2 {
+    0% {
+      -webkit-transform: translate(90px, -73px) scale(0.1);
+      transform: translate(90px, -73px) scale(0.1);
+    }
+    25% {
+      -webkit-transform: translate(90px, -38px) scale(0.1);
+      transform: translate(90px, -38px) scale(0.1);
+    }
+    50% {
+      -webkit-transform: translate(0px, -38px) scale(0.1);
+      transform: translate(0px, -38px) scale(0.1);
+    }
+    75% {
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes glide-3 {
+    0% {
+      -webkit-transform: translate(-90px, -73px) scale(0.1);
+      transform: translate(-90px, -73px) scale(0.1);
+    }
+    25% {
+      -webkit-transform: translate(-90px, -38px) scale(0.1);
+      transform: translate(-90px, -38px) scale(0.1);
+    }
+    50% {
+      -webkit-transform: translate(0px, -38px) scale(0.1);
+      transform: translate(0px, -38px) scale(0.1);
+    }
+    75% {
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes glide-4 {
+    0% {
+      -webkit-transform: translate(-270px, -73px) scale(0.1);
+      transform: translate(-270px, -73px) scale(0.1);
+    }
+    25% {
+      -webkit-transform: translate(-270px, -38px) scale(0.1);
+      transform: translate(-270px, -38px) scale(0.1);
+    }
+    50% {
+      -webkit-transform: translate(0px, -38px) scale(0.1);
+      transform: translate(0px, -38px) scale(0.1);
+    }
+    75% {
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
   .analitics {
     padding: 50px 0 100px;
   }
@@ -166,6 +254,49 @@
     padding-top: 25px;
     height: auto;
     flex-wrap: wrap;
+  }
+  .analitics__item:first-of-type {
+    transform-origin: top;
+    transform: translate(270px, -73px) scale(0.1);
+  }
+  .analitics__item:first-of-type .analitics__name {
+    transform-origin: top;
+  }
+  .analitics__item:nth-of-type(2) {
+    transform-origin: top;
+    transform: translate(90px, -73px) scale(0.1);
+    transition-delay: .2s;
+  }
+  .analitics__item:nth-of-type(2).animate {
+    animation: glide-2 .4s linear .2s;
+  }
+  .analitics__item:nth-of-type(2) .analitics__name {
+    transform-origin: top;
+    transition-delay: .4s;
+  }
+  .analitics__item:nth-last-of-type(2) {
+    transform-origin: top;
+    transform: translate(-90px, -73px) scale(0.1);
+    transition-delay: .4s;
+  }
+  .analitics__item:nth-last-of-type(2).animate {
+    animation: glide-3 .4s linear .4s;
+  }
+  .analitics__item:nth-last-of-type(2) .analitics__name {
+    transform-origin: top;
+    transition-delay: .6s;
+  }
+  .analitics__item:last-of-type {
+    transform-origin: top;
+    transform: translate(-270px, -73px) scale(0.1);
+    transition-delay: .6s;
+  }
+  .analitics__item:last-of-type.animate {
+    animation: glide-4 .4s linear .6s;
+  }
+  .analitics__item:last-of-type .analitics__name {
+    transform-origin: top;
+    transition-delay: .8s;
   }
   .analitics__item:nth-child(n + 2) {
     margin-left: 60px;
@@ -313,6 +444,9 @@
   .testimonials .slider-container {
     width: 676px;
   }
+  .politics {
+    max-width: 720px;
+  }
 }
 
 /* max-width 991px */
@@ -413,6 +547,94 @@
   .main-screen button {
     width: 100%;
   }
+  @keyframes glide-1 {
+    0% {
+      -webkit-transform: translate(88px, 50px) scale(0.1);
+      transform: translate(88px, 50px) scale(0.1);
+    }
+    25% {
+      -webkit-transform: translate(88px, 24px) scale(0.1);
+      transform: translate(88px, 24px) scale(0.1);
+    }
+    50% {
+      -webkit-transform: translate(0px, 24px) scale(0.1);
+      transform: translate(0px, 24px) scale(0.1);
+    }
+    75% {
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes glide-2 {
+    0% {
+      -webkit-transform: translate(-90px, 50px) scale(0.1);
+      transform: translate(-90px, 50px) scale(0.1);
+    }
+    25% {
+      -webkit-transform: translate(-90px, 24px) scale(0.1);
+      transform: translate(-90px, 24px) scale(0.1);
+    }
+    50% {
+      -webkit-transform: translate(0px, 24px) scale(0.1);
+      transform: translate(0px, 24px) scale(0.1);
+    }
+    75% {
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes glide-3 {
+    0% {
+      -webkit-transform: translate(90px, -50px) scale(0.1);
+      transform: translate(90px, -50px) scale(0.1);
+    }
+    25% {
+      -webkit-transform: translate(90px, -24px) scale(0.1);
+      transform: translate(90px, -24px) scale(0.1);
+    }
+    50% {
+      -webkit-transform: translate(0px, -24px) scale(0.1);
+      transform: translate(0px, -24px) scale(0.1);
+    }
+    75% {
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes glide-4 {
+    0% {
+      -webkit-transform: translate(-88px, -50px) scale(0.1);
+      transform: translate(-88px, -50px) scale(0.1);
+    }
+    25% {
+      -webkit-transform: translate(-88px, -24px) scale(0.1);
+      transform: translate(-88px, -24px) scale(0.1);
+    }
+    50% {
+      -webkit-transform: translate(0px, -24px) scale(0.1);
+      transform: translate(0px, -24px) scale(0.1);
+    }
+    75% {
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
   .analitics {
     padding-bottom: 50px;
   }
@@ -432,6 +654,49 @@
     top: 6px;
     bottom: auto;
     transform: translate(-50%, -100%) rotate(180deg);
+  }
+  .analitics__item:first-of-type {
+    transform-origin: bottom;
+    transform: translate(88px, 50px) scale(0.1);
+  }
+  .analitics__item:first-of-type .analitics__name {
+    transform-origin: bottom;
+  }
+  .analitics__item:nth-of-type(2) {
+    transform-origin: bottom;
+    transform: translate(-90px, 50px) scale(0.1);
+    transition-delay: .2s;
+  }
+  .analitics__item:nth-of-type(2).animate {
+    animation: glide-2 .4s linear .2s;
+  }
+  .analitics__item:nth-of-type(2) .analitics__name {
+    transform-origin: bottom;
+    transition-delay: .4s;
+  }
+  .analitics__item:nth-last-of-type(2) {
+    transform-origin: top;
+    transform: translate(90px, -50px) scale(0.1);
+    transition-delay: 0s;
+  }
+  .analitics__item:nth-last-of-type(2).animate {
+    animation: glide-3 .4s linear 0s;
+  }
+  .analitics__item:nth-last-of-type(2) .analitics__name {
+    transform-origin: top;
+    transition-delay: .2s;
+  }
+  .analitics__item:last-of-type {
+    transform-origin: top;
+    transform: translate(-88px, -50px) scale(0.1);
+    transition-delay: .2s;
+  }
+  .analitics__item:last-of-type.animate {
+    animation: glide-4 .4s linear .2s;
+  }
+  .analitics__item:last-of-type .analitics__name {
+    transform-origin: top;
+    transition-delay: .4s;
   }
   .analitics__item:nth-last-child(n + 3) {
     padding-top: 0;
@@ -636,6 +901,16 @@
   }
   .testimonials .slider-container {
     width: 338px;
+  }
+  .politics {
+    max-width: 360px;
+  }
+  .politics h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .politics h2 {
+    font-size: 24px;
   }
 }
 

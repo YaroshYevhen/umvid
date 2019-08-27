@@ -1048,9 +1048,28 @@ body.menu .hamburger {
 }
 
 .glossary-item {
-  padding: 0 9px;
+  padding: 0 8px;
   position: relative;
   cursor: pointer;
+}
+
+.glossary-item path {
+  stroke: #9fb3d2;
+  -webkit-transition: stroke .3s, stroke-width .3s;
+  transition: stroke .3s, stroke-width .3s;
+}
+
+.glossary-item:active path {
+  stroke: #4fa1dd !important;
+}
+
+.glossary-item:active .glossary-item__title {
+  color: #4fa1dd !important;
+}
+
+.glossary-item__title {
+  -webkit-transition: color .3s;
+  transition: color .3s;
 }
 
 .glossary-item::after {
@@ -1082,22 +1101,11 @@ body.menu .hamburger {
 .glossary-item__img {
   position: relative;
   width: 100%;
-  height: 333px;
+  height: 337px;
   background: 50% 50% / cover no-repeat;
   margin-bottom: 25px;
-  border: 1px solid #a4badd;
   -webkit-mask: url(../img/glossary-border.svg) 50% 50%/contain no-repeat;
   mask: url(../img/glossary-border.svg) 50% 50%/contain no-repeat;
-}
-
-.glossary-item__img::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../img/glossary-border.svg) 50% 50%/cover no-repeat;
 }
 
 .glossary-item__img .angle {
@@ -1150,19 +1158,68 @@ body.menu .hamburger {
   width: 1014px;
 }
 
+.testimonials .slider-container::before {
+  content: "";
+  position: absolute;
+  width: 10000px;
+  height: 1px;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #368ea7;
+}
+
+.testimonials .slick-dots li button svg path {
+  stroke: #fff;
+}
+
+.testimonials .slick-dots li.slick-active button svg path {
+  fill: #fff;
+}
+
+.testimonials .slick-dots li:active path {
+  stroke: #23ecb9;
+}
+
+.testimonials .slick-arrow {
+  top: 100px;
+}
+
+.testimonials .slick-arrow:active > svg path {
+  fill: #bcffee !important;
+  stroke: #bcffee !important;
+}
+
+.testimonials .slick-arrow > svg path {
+  stroke: #368ea7;
+}
+
+.testimonials .slick-arrow .line {
+  background-color: #368ea7;
+}
+
+.testimonials .slick-arrow .line::after {
+  background: url(../img/testimonials-circle.svg) 50% 50%/contain no-repeat;
+}
+
 .testimonials-item {
-  padding: 0 9px;
+  padding: 0 8px;
   cursor: pointer;
+}
+
+.testimonials-item path {
+  -webkit-transition: stroke .3s, stroke-width .3s;
+  transition: stroke .3s, stroke-width .3s;
 }
 
 .testimonials-item__img {
   width: 100%;
-  height: 200px;
+  height: 202px;
   position: relative;
   background: 0% 0% / cover no-repeat;
-  border: 1px solid #368ea7;
-  -webkit-mask-image: url(../img/testimonials-border.svg);
-  mask-image: url(../img/testimonials-border.svg);
+  -webkit-mask: url(../img/testimonials-border.svg) 50% 50%/contain round;
+  mask: url(../img/testimonials-border.svg) 50% 50%/contain round;
 }
 
 .testimonials-item__img .angle {
@@ -1387,6 +1444,7 @@ body.menu .hamburger {
   padding-top: 70px;
   padding-bottom: 100px;
   position: relative;
+  background: 50% 50% / cover no-repeat;
 }
 
 .price__text {
@@ -1446,6 +1504,8 @@ body.menu .hamburger {
   background-color: #fff;
   -webkit-mask-image: url(../img/calculator-border.svg);
   mask-image: url(../img/calculator-border.svg);
+  -webkit-mask-repeat: round;
+  mask-repeat: round;
 }
 
 .calculator__img {
@@ -1476,8 +1536,8 @@ body.menu .hamburger {
   height: 100%;
   width: 100%;
   position: absolute;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
+  -webkit-transform: translateX(120%);
+  transform: translateX(120%);
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
   transition: transform .3s;
@@ -1557,15 +1617,15 @@ body.menu .hamburger {
 }
 
 .calculator-select textarea {
-  width: 615px;
+  width: calc(100% - 310px);
   height: 95px;
-  margin: 0px 30px;
+  margin: 0 0 15px 30px;
 }
 
 .calculator-select input[type="text"],
 .calculator-select input[type="tel"],
 .calculator-select input[type="email"] {
-  margin-left: 30px;
+  margin: 0 0 15px 30px;
   width: calc(33.33% - 30px);
 }
 
@@ -1579,6 +1639,7 @@ body.menu .hamburger {
 
 .file-btn-container {
   width: 250px;
+  margin-left: 30px;
 }
 
 .file-btn__text {
@@ -1605,13 +1666,37 @@ body.menu .hamburger {
 
 /****************/
 /* CONTACTS */
+.contacts {
+  position: relative;
+  padding: 60px 0;
+}
+
+.contacts__map {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.contacts__map iframe {
+  position: absolute;
+  width: calc(100% + 250px);
+  height: calc(100% + 250px);
+  top: 0;
+  left: 0;
+  margin: -125px -50px;
+}
+
 .contacts-address {
+  position: relative;
+  z-index: 1;
   width: 475px;
-  margin-top: 60px;
-  margin-bottom: 60px;
   font-style: normal;
   padding: 50px;
   border: 1px solid #c5c5c5;
+  background-color: #fff;
 }
 
 .contacts__title {

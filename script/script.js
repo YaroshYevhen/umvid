@@ -10,22 +10,89 @@ APP.priceBtn = $('.calculator__btn');
 APP.uploadFile = $('.file-btn');
 APP.removeFile = $('.selected-files__remove');
 APP.wpFile = $('.input-file');
+APP.modalArrow = $('.modal-slider__arrow');
 
-function closeModal(){
-	$('.modal').removeClass('active');
+function fillTitle() {
+  var filler = $('.price .title-l .filler'),
+      currentIndex = $('.calculator-item.current').index('.calculator-item'),
+      totalSlides = $('.calculator-item').length,
+      fillPercent = currentIndex * 100 / (totalSlides - 1) + "%";
+
+  filler.animate({ 'max-width': fillPercent }, 300);
+}
+
+function doAnimation() {
+    var windowScroll = $(window).height() + APP.$document.scrollTop(),
+        element = APP.$document.find('.js-animation:not(.animate)')[0];
+
+  $('.js-animation:not(.animate)').each(function(key, item){
+    var itemOffset = $(item).offset().top + 100,
+        tableParent = $(item).parents('.palette-table');
+
+    if($(this).hasClass('price') && $(window).width() >= '1139'){
+      itemOffset = $(item).offset().top + 400
+    }
+    if(windowScroll >= itemOffset){
+        $(item).addClass('animate');
+    }
+  });
+};
+
+function closeModal() {
+	$('.modal').scrollTop(0).removeClass('active');
 	$('html').removeClass('overflow');
 }
 
 APP.$document.ready(function() {
+  doAnimation ();
+
+  APP.$document.on('scroll', function(event){
+    doAnimation ();
+
+    if($(window).scrollTop() > 100) {
+      $('.header').addClass('fixed');
+    } else {
+      $('.header').removeClass('fixed');
+    }
+  });
+
 	APP.hamburger.on('click', function(){
     $(this).toggleClass('active');
     $('body').toggleClass('menu');
     $('html').toggleClass('overflow');
   });
+
+  APP.modalArrow.on('click', function() {
+    var parent = $(this).parents('.modal-container'),
+        firstSlide = parent.find('.modal-slider__item.first'),
+        currentSlide = parent.find('.modal-slider__item.current'),
+        totalSlides = parent.find('.modal-slider__item').length,
+        currentSlideIndex = currentSlide.index();
+
+    if($(this).hasClass('slick-next') && currentSlideIndex < (totalSlides - 1)) {
+      var nextSlide = currentSlide.next();
+
+      nextSlide.addClass('current');
+      currentSlide.removeClass('current');
+
+      var currentIndex = parent.find('.modal-slider__item.current').index();
+      firstSlide.css({'margin-left' : (-100 * currentIndex + "%")});
+    } else if($(this).hasClass('slick-prev') && currentSlideIndex > 0) {
+      var prevSlide = currentSlide.prev();
+
+      prevSlide.addClass('current');
+      currentSlide.removeClass('current');
+
+      var currentIndex = parent.find('.modal-slider__item.current').index();
+      firstSlide.css({'margin-left' : (-100 * currentIndex + "%")});
+    }
+  });
+
 	$('.selected-files').hide();
 	APP.uploadFile.on('click', function() {
 			APP.wpFile.click();
 	})
+
 	APP.wpFile.on('change', function(event) {
 		var fileName = event.target.files[0].name,
 				replace = fileName.replace(/\s/g,'_');
@@ -36,6 +103,7 @@ APP.$document.ready(function() {
 		$('.selected-files').show();
 		$('.selected-files__text').html(replace);
 	});
+
 	APP.removeFile.on('click', function() {
 		$('.selected-files__text').empty();
 		$('.selected-files').hide();
@@ -44,9 +112,11 @@ APP.$document.ready(function() {
 			$('.file-btn__text').show();
 		}
 	});
+
 	$('input[type="file"]').change(function(e){
   	var fileName = e.target.files[0].name;
 	});
+
 	APP.priceBtn.on('click', function(){
   	var currentSlide = $('.calculator-item.current');
 
@@ -79,11 +149,12 @@ APP.$document.ready(function() {
     	currentSlide.next().addClass('active');
     	currentSlide.removeClass('current').addClass('prev').next('.calculator-item').addClass('current');
     }
+    fillTitle()
   });
 
 	APP.scrollBtn.on('click', function(){
     var section = $(this).data('scroll'),
-        scrollTo = $(section).offset().top;
+        scrollTo = $(section).offset().top - 70;
 
     $('html').removeClass('overflow');
     $('html, body').animate({ scrollTop: scrollTo }, 500);
@@ -95,8 +166,13 @@ APP.$document.ready(function() {
 		var attr = $(this).attr('data-target'),
 				modal = $('.modal[data-target="' + attr + '"]');
 
+    if($(this).hasClass('modal__btn')) {
+      var serviceName = $(this).parents('.modal-container').find('.modal__title').text();
+      modal.find('.modal__title + p').text('(' + serviceName + ')');
+      closeModal();
+    }
 		modal.addClass('active');
-
+    $('html').addClass('overflow');
 	});
 
 	$('.modal-close').on('click', function() {
@@ -148,4 +224,11 @@ APP.$document.ready(function() {
       $(this).html('<svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" width="10.5px" height="11.5px"><path fill-rule="evenodd"  stroke="rgb(28, 58, 106)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"d="M4.996,10.503 L0.493,8.002 L0.493,2.999 L4.996,0.498 L9.499,2.999 L9.499,8.002 L4.996,10.503 Z"/></svg>');
     });
   });
+  APP.slider.on('breakpoint', function(){
+    $('.slick-dots li button').each(function(){
+      $(this).html('<svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" width="10.5px" height="11.5px"><path fill-rule="evenodd"  stroke="rgb(28, 58, 106)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"d="M4.996,10.503 L0.493,8.002 L0.493,2.999 L4.996,0.498 L9.499,2.999 L9.499,8.002 L4.996,10.503 Z"/></svg>');
+    });
+  })
+    
 });
+

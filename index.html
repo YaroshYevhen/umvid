@@ -11,7 +11,7 @@
 </head>
 <body>
 	<header class="header d-flex align-items-center justify-content-between">
-		<img src="img/logo.png" alt="logo" class="logo">
+		<img src="img/logo.svg" alt="logo" class="logo">
 		<div class="hamburger">
 			<span></span>
 			<span></span>
@@ -21,9 +21,9 @@
 			<ul class="d-flex justify-content-lg-between flex-wrap">
 				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".analitics">Видеоаналитика</span></li>
 				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".services">услуги</span></li>
-				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".sertificates">сертификаты</span></li>
-				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".testimonials">отзывы</span></li>
 				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".glossary">глоссарий</span></li>
+				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".testimonials">отзывы</span></li>
+				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".sertificates">сертификаты</span></li>
 				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".price">расчет стоимости</span></li>
 				<li class="nav__li"><span class="nav__item scroll-btn" data-scroll=".contacts">контакты</span></li>
 			</ul>
@@ -32,7 +32,7 @@
 		<button class="standart-btn header-btn scroll-btn small" data-scroll=".price">расчет стоимости</button>
 	</header>
 	<main>
-		<section class="main-screen" style="background-image: url(img/main-background.jpg);">
+		<section class="main-screen js-animation" style="background-image: url(img/main-background.jpg);">
 			<div class="container">
 				<h1 class="main-screen__title title">Устанавливаем системы видеонаблюдения <br> под ключ</h1>
 				<p>Внедряем систему видеоаналитики, с помощью которой следить за объектом максимально просто</p>
@@ -46,24 +46,24 @@
 				<h1 class="title-l">Видеоаналитика</h1>
 				<p class="text-center analitics__text">Наши клиенты имеют доступ к <strong>уникальной технологии отслеживания событий</strong>, получая уведомления на свой смартфон обо всех подозрительных ситуациях. При этом вы прямо с телефона можете следить за всем происходящим с любой точки мира.</p>
 				<div class="analitics-container d-flex align-items-center flex-xl-column flex-wrap justify-content-center justify-content-xl-start">
-					<div class="analitics__item d-flex align-items-xl-center justify-content-xl-end justify-content-center">
+					<div class="analitics__item js-animation d-flex align-items-xl-center justify-content-xl-end justify-content-center">
 						<span class="analitics__name text-xl-right">Движение</span>
-						<div class="analitics__icon d-flex justify-content-center align-items-center order-1 order-md-0"><img src="img/analitics-1.svg" alt="" aria-hidden="true"></div>
+						<div class="analitics__icon d-flex justify-content-center align-items-center order-1 order-md-0"><i class="icon-analitics-1" aria-hidden="true"></i></div>
 						<div class="analitics__tooltip">
 							<h2>Движение</h2>
-							<p>При возникновении движения в этих прямоугольниках вам придет уведомление в реальном времени с фото картинкой объекта совершившего движение в выделенных областях.</p>
+							<p>При возникновении движущегося объекта в контролируемых зонах вам придет уведомление в реальном времени с фотографией объекта, совершившего движение.</p>
 						</div>
 					</div>
-					<div class="analitics__item d-flex align-items-xl-center justify-content-xl-end justify-content-center">
+					<div class="analitics__item js-animation d-flex align-items-xl-center justify-content-xl-end justify-content-center">
 						<span class="analitics__name text-xl-right">Пересечение линий</span>
-						<div class="analitics__icon d-flex justify-content-center align-items-center order-1 order-md-0"><img src="img/analitics-2.svg" alt="" aria-hidden="true"></div>
+						<div class="analitics__icon d-flex justify-content-center align-items-center order-1 order-md-0"><i class="icon-analitics-2" aria-hidden="true"></i></div>
 						<div class="analitics__tooltip">
 							<h2>Пересечение линий</h2>
-							<p>При возникновении движения в этих прямоугольниках вам придет уведомление в реальном времени с фото картинкой объекта совершившего движение в выделенных областях.</p>
+							<p>При пересечении заданной линии любым объектом в контролируемых зонах вам придет уведомление в реальном времени с фотографией объекта, который пересёк границу.</p>
 						</div>
 					</div>
 					<div class="analitics__video order-md-first order-xl-0" >
-						<iframe class="video" width="1189" height="669" src="https://www.youtube.com/embed/yN_HbIW1qHE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<video src="img/hromakey-umvid_3_final.mp4" class="video" controls=""></video>
 						<div class="angle"></div>
 						<div class="angle"></div>
 						<div class="angle"></div>
@@ -73,20 +73,20 @@
 						<img src="img/analitics-lines-3.svg" class="lines d-md-none" alt="" aria-hidden="true">
 						<img src="img/analitics-lines-3.svg" class="lines d-md-none" alt="" aria-hidden="true">
 					</div>
-					<div class="analitics__item d-flex align-items-xl-center justify-content-xl-end justify-content-center flex-xl-row-reverse">
+					<div class="analitics__item js-animation d-flex align-items-xl-center justify-content-xl-end justify-content-center flex-xl-row-reverse">
 						<span class="analitics__name">Вторжение</span>
-						<div class="analitics__icon d-flex justify-content-center align-items-center"><img src="img/analitics-3.svg" alt="" aria-hidden="true"></div>
+						<div class="analitics__icon d-flex justify-content-center align-items-center"><i class="icon-analitics-3" aria-hidden="true"></i></div>
 						<div class="analitics__tooltip">
 							<h2>Вторжение</h2>
-							<p>При возникновении движения в этих прямоугольниках вам придет уведомление в реальном времени с фото картинкой объекта совершившего движение в выделенных областях.</p>
+							<p>При вторжении на территорию объекта вам придет уведомление в реальном времени с фотографией охраняемого объекта.</p>
 						</div>
 					</div>
-					<div class="analitics__item d-flex align-items-xl-center justify-content-xl-end justify-content-center flex-xl-row-reverse">
+					<div class="analitics__item js-animation d-flex align-items-xl-center justify-content-xl-end justify-content-center flex-xl-row-reverse">
 						<span class="analitics__name">Звуки</span>
-						<div class="analitics__icon d-flex justify-content-center align-items-center"><img src="img/analitics-4.svg" alt="" aria-hidden="true"></div>
+						<div class="analitics__icon d-flex justify-content-center align-items-center"><i class="icon-analitics-4" aria-hidden="true"></i></div>
 						<div class="analitics__tooltip">
 							<h2>Звуки</h2>
-							<p>При возникновении движения в этих прямоугольниках вам придет уведомление в реальном времени с фото картинкой объекта совершившего движение в выделенных областях.</p>
+							<p>При возникновении звука на охраняемом объекта вам немедленно придёт фотография объекта в режиме реального времени.</p>
 						</div>
 					</div>
 
@@ -97,7 +97,7 @@
 			<div class="container d-flex flex-column align-items-center">
 				<h1 class="title-l white">услуги</h1>
 				<div class="services-container d-flex">
-					<div class="services-item d-flex flex-column">
+					<div class="services-item js-animation d-flex flex-column">
 						<div class="services-item__title text-center">
 							<h2 class="title-m white">Продажа</h2>
 							<span>(все регионы)</span>
@@ -125,7 +125,7 @@
 						<p class="services-item__price text-center title">от <span>2990</span> р</p>
 						<button class="services-item__more text-center modal-btn" data-target="services"><span>Подробнее</span></button>
 					</div>
-					<div class="services-item d-flex flex-column">
+					<div class="services-item js-animation d-flex flex-column">
 						<div class="services-item__title text-center">
 							<h2 class="title-m white">Комплектация</h2>
 							<span>(все регионы)</span>
@@ -153,7 +153,7 @@
 						<p class="services-item__price text-center title">от <span>3990</span> р</p>
 						<button class="services-item__more text-center modal-btn" data-target="services"><span>Подробнее</span></button>
 					</div>
-					<div class="services-item d-flex flex-column">
+					<div class="services-item js-animation d-flex flex-column">
 						<div class="services-item__title text-center">
 							<h2 class="title-m white">настройка</h2>
 							<span>(все регионы)</span>
@@ -181,7 +181,7 @@
 						<p class="services-item__price text-center title">от <span>4990</span> р</p>
 						<button class="services-item__more text-center modal-btn" data-target="services"><span>Подробнее</span></button>
 					</div>
-					<div class="services-item d-flex flex-column">
+					<div class="services-item js-animation d-flex flex-column">
 						<div class="services-item__title text-center">
 							<h2 class="title-m white">под ключ</h2>
 							<span>(Москва и МО)</span>
@@ -219,8 +219,8 @@
 			<div class="container">
 				<h1 class="title-l">глоссарий</h1>
 				<p class="text-center glossary__text">Если у вас возникли вопросы или вы хотите лучше понимать, как работает видеонаблюдение, прежде, <br> чем его заказывать - ознакомтесь с данной информацией. Надеемся, это будет вам полезно</p>
-				<div class="slider-container mx-auto">
-					<div class="glossary-item">
+				<div class="slider-container js-animation mx-auto">
+					<div class="glossary-item modal-btn" data-target="glossary-slider">
 						<div class="glossary-item__img" style="background-image: url(img/glossary-1.jpg);">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"  viewBox="0 0 321.5 336.5" preserveAspectRatio="xMinYMin meet">
 							<path fill-rule="evenodd" stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="transparent" d="M160.494,0.499 L320.492,84.246 L320.492,251.741 L160.494,335.489 L0.496,251.741 L0.496,84.246 L160.494,0.499 Z"/>
@@ -228,7 +228,7 @@
 						</div>
 						<h3 class="glossary-item__title title-s text-center">Задачи  видеонаблюдения</h3>
 					</div>
-					<div class="glossary-item">
+					<div class="glossary-item modal-btn" data-target="glossary-slider">
 						<div class="glossary-item__img" style="background-image: url(img/glossary-2.jpg);">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"  viewBox="0 0 321.5 336.5" preserveAspectRatio="xMinYMin meet">
 							<path fill-rule="evenodd" stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="transparent" d="M160.494,0.499 L320.492,84.246 L320.492,251.741 L160.494,335.489 L0.496,251.741 L0.496,84.246 L160.494,0.499 Z"/>
@@ -236,7 +236,7 @@
 						</div>
 						<h3 class="glossary-item__title title-s text-center">Analog против IP камеры</h3>
 					</div>
-					<div class="glossary-item">
+					<div class="glossary-item modal-btn" data-target="glossary-slider">
 						<div class="glossary-item__img" style="background-image: url(img/glossary-3.jpg);">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"  viewBox="0 0 321.5 336.5" preserveAspectRatio="xMinYMin meet">
 							<path fill-rule="evenodd" stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="transparent" d="M160.494,0.499 L320.492,84.246 L320.492,251.741 L160.494,335.489 L0.496,251.741 L0.496,84.246 L160.494,0.499 Z"/>
@@ -244,7 +244,7 @@
 						</div>
 						<h3 class="glossary-item__title title-s text-center">Функция AGC</h3>
 					</div>
-					<div class="glossary-item">
+					<div class="glossary-item modal-btn" data-target="glossary-slider">
 						<div class="glossary-item__img" style="background-image: url(img/glossary-1.jpg);">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"  viewBox="0 0 321.5 336.5" preserveAspectRatio="xMinYMin meet">
 							<path fill-rule="evenodd" stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="transparent" d="M160.494,0.499 L320.492,84.246 L320.492,251.741 L160.494,335.489 L0.496,251.741 L0.496,84.246 L160.494,0.499 Z"/>
@@ -252,7 +252,7 @@
 						</div>
 						<h3 class="glossary-item__title title-s text-center">Задачи  видеонаблюдения</h3>
 					</div>
-					<div class="glossary-item">
+					<div class="glossary-item modal-btn" data-target="glossary-slider">
 						<div class="glossary-item__img" style="background-image: url(img/glossary-2.jpg);">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"  viewBox="0 0 321.5 336.5" preserveAspectRatio="xMinYMin meet">
 							<path fill-rule="evenodd" stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="transparent" d="M160.494,0.499 L320.492,84.246 L320.492,251.741 L160.494,335.489 L0.496,251.741 L0.496,84.246 L160.494,0.499 Z"/>
@@ -260,7 +260,7 @@
 						</div>
 						<h3 class="glossary-item__title title-s text-center">Analog против IP камеры</h3>
 					</div>
-					<div class="glossary-item">
+					<div class="glossary-item modal-btn" data-target="glossary-slider">
 						<div class="glossary-item__img" style="background-image: url(img/glossary-3.jpg);">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"  viewBox="0 0 321.5 336.5" preserveAspectRatio="xMinYMin meet">
 							<path fill-rule="evenodd" stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="transparent" d="M160.494,0.499 L320.492,84.246 L320.492,251.741 L160.494,335.489 L0.496,251.741 L0.496,84.246 L160.494,0.499 Z"/>
@@ -275,8 +275,8 @@
 			<div class="container">
 				<h1 class="title-l white">отзывы</h1>
 				<p class="text-center testimonials__text">Убедитесь в качестве наших услуг. Благодарности наших клиентов - лучши показатель качества <br> и наша личная гордость</p>
-				<div class="slider-container mx-auto">
-					<div class="testimonials-item">
+				<div class="slider-container js-animation mx-auto">
+					<div class="testimonials-item modal-btn" data-target="testimonials-slider">
 						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
 							<svg 
 							 xmlns="http://www.w3.org/2000/svg"
@@ -287,7 +287,7 @@
 							</svg>
 						</div>
 					</div>
-					<div class="testimonials-item">
+					<div class="testimonials-item modal-btn" data-target="testimonials-slider">
 						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
 							<svg 
 							 xmlns="http://www.w3.org/2000/svg"
@@ -298,7 +298,7 @@
 							</svg>
 						</div>
 					</div>
-					<div class="testimonials-item">
+					<div class="testimonials-item modal-btn" data-target="testimonials-slider">
 						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
 							<svg 
 							 xmlns="http://www.w3.org/2000/svg"
@@ -309,7 +309,7 @@
 							</svg>
 						</div>
 					</div>
-					<div class="testimonials-item">
+					<div class="testimonials-item modal-btn" data-target="testimonials-slider">
 						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
 							<svg 
 							 xmlns="http://www.w3.org/2000/svg"
@@ -320,7 +320,7 @@
 							</svg>
 						</div>
 					</div>
-					<div class="testimonials-item">
+					<div class="testimonials-item modal-btn" data-target="testimonials-slider">
 						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
 							<svg 
 							 xmlns="http://www.w3.org/2000/svg"
@@ -331,7 +331,7 @@
 							</svg>
 						</div>
 					</div>
-					<div class="testimonials-item">
+					<div class="testimonials-item modal-btn" data-target="testimonials-slider">
 						<div class="testimonials-item__img" style="background-image: url(img/testimonials-1.jpg);">
 							<svg 
 							 xmlns="http://www.w3.org/2000/svg"
@@ -348,7 +348,7 @@
 		<section class="sertificates">
 			<div class="container d-flex flex-column align-items-center">
 				<h1 class="title-l">сертификаты</h1>
-				<div class="sertificates-container d-flex flex-column flex-wrap">
+				<div class="sertificates-container js-animation d-flex flex-column flex-wrap">
 					<img src="img/sertificates-lines.svg" aria-hidden="true" alt="" class="lines">
 					<div class="square">
 						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
@@ -358,7 +358,7 @@
 						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
 						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
 					</div>
-					<div class="sertificates__item" style="background-image: url(img/sertificates-1.jpg);">
+					<div class="sertificates__item modal-btn" data-target="sertificates-slider" style="background-image: url(img/sertificates-1.jpg);">
 						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
 						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
 					</div>
@@ -374,17 +374,17 @@
 						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
 						<div class="tablet-line"></div>
 					</div>
-					<div class="sertificates__item" style="background-image: url(img/sertificates-4.jpg);">
+					<div class="sertificates__item modal-btn" data-target="sertificates-slider" style="background-image: url(img/sertificates-4.jpg);">
 						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
 						<img src="img/sertificates-circle.svg" alt="" aria-hidden="true" class="dot">
 					</div>
 				</div>
-				<!-- <button class="standart-btn white mx-auto">смотреть ещё</button> -->
+				<button class="standart-btn white mx-auto">смотреть ещё</button>
 			</div>
 		</section>
 		<section class="price" style="background-image: url(img/price-bg.jpg);">
 			<div class="container position-relative">
-				<h1 class="title-l white">Расчет стоимости</h1>
+				<h1 class="title-l white"><span class="filler-container"><span>Расчет стоимости</span><span class="filler">Расчет стоимости</span></span></h1>
 				<p class="price__text text-center">Ответьте на несколько простых вопростов и получите расчет стоимости установки <br> видеонаблюдения специально для вас!</p>
 				<div class="calculator">
 					<div class="calculator-container">
@@ -537,24 +537,135 @@
 						<h2>ВНИМАНИЕ!!!</h2>
 						<p>Окончательное формирование комплекта может быть с добавлением компонентов типа распаячные коробки, гофра, короба и другие расходные материалы. Многое зависит от инфраструктуры самого объекта и эстетичных пожеланий заказчика.</p>
 					</div>
-					<button class="modal__btn standart-btn mx-auto">заказать консультацию по услуге</button>
+					<button class="modal__btn modal-btn standart-btn mx-auto" data-target="consultation">заказать консультацию по услуге</button>
       </div>
     </div>
     <div class="modal" data-target="consultation">
       <div class="modal-container">
         <div class="modal-close"></div>
 					<h1 class="modal__title title">Бесплатная консультация</h1>
+					<p class="text-center"></p>
 					<input type="text" placeholder="Имя">
 					<input type="tel" placeholder="Телефон*" required>
 					<button class="modal__btn standart-btn mx-auto">заказать консультацию</button>
 					<p class="modal__politics text-center">Нажимая “Заказать консультацию” вы соглашаетесь  с <a href="documents/politics.html">политикой конфиденциальности</a></p>
       </div>
     </div>
+    <div class="modal" data-target="glossary-slider">
+      <div class="modal-container">
+        <div class="modal-close"></div>
+        <button class="slick-next slick-arrow modal-slider__arrow"><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="32.5px" height="37.5px"><path fill-rule="evenodd"  stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"d="M15.994,36.481 L0.496,27.484 L0.496,9.490 L15.994,0.494 L31.492,9.490 L31.492,27.484 L15.994,36.481 Z"/></svg><i><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="7px" height="14px"><path fill-rule="evenodd"  fill="rgb(28, 58, 106)"d="M6.575,12.864 L1.186,6.995 L6.575,1.126 L6.053,0.559 L0.131,6.995 L6.053,13.432 L6.575,12.864 Z"/></svg></i><div class="line"></div><div class="line"></div></button>
+        <button class="slick-prev slick-arrow modal-slider__arrow"><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="32.5px" height="37.5px"><path fill-rule="evenodd"  stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"d="M15.994,36.481 L0.496,27.484 L0.496,9.490 L15.994,0.494 L31.492,9.490 L31.492,27.484 L15.994,36.481 Z"/></svg><i><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="7px" height="14px"><path fill-rule="evenodd"  fill="rgb(28, 58, 106)"d="M6.575,12.864 L1.186,6.995 L6.575,1.126 L6.053,0.559 L0.131,6.995 L6.053,13.432 L6.575,12.864 Z"/></svg></i><div class="line"></div><div class="line"></div></button>
+				<div class="modal-slider">
+					<div class="modal-slider__item first current">
+						<h1 class="modal__title title">задачи видеонаблюдения</h1>
+						<img src="img/glossary-modal-1.jpg" alt="" aria-hidden="true">
+						<div class="modal__text">
+							<h2>Обнаружение</h2>
+							<p>Выделение объекта контроля из фона, либо раздельное восприятие двух объектов контроля, расположенных на растоянии друг от друга, соизмеримом с их размерами.</p>
+						</div>
+						<div class="modal__text">
+							<h2>Распознание</h2>
+							<p>Определение личности знакомого человека по поступающему с видеокамеры изображению.</p>
+						</div>
+						<div class="modal__text">
+							<h2>Идентификация</h2>
+							<p>Автоматическое определение личности незнакомого человека по алгоритму идентификации отдельных черт с имеющимся в базе данных изображением.</p>
+						</div>
+					</div>
+					<div class="modal-slider__item">
+						<h1 class="modal__title title">задачи видеонаблюдения</h1>
+						<img src="img/glossary-modal-1.jpg" alt="" aria-hidden="true">
+						<div class="modal__text">
+							<h2>Обнаружение</h2>
+							<p>Выделение объекта контроля из фона, либо раздельное восприятие двух объектов контроля, расположенных на растоянии друг от друга, соизмеримом с их размерами.</p>
+						</div>
+						<div class="modal__text">
+							<h2>Распознание</h2>
+							<p>Определение личности знакомого человека по поступающему с видеокамеры изображению.</p>
+						</div>
+						<div class="modal__text">
+							<h2>Идентификация</h2>
+							<p>Автоматическое определение личности незнакомого человека по алгоритму идентификации отдельных черт с имеющимся в базе данных изображением.</p>
+						</div>
+					</div>
+					<div class="modal-slider__item">
+						<h1 class="modal__title title">задачи видеонаблюдения</h1>
+						<img src="img/glossary-modal-1.jpg" alt="" aria-hidden="true">
+						<div class="modal__text">
+							<h2>Обнаружение</h2>
+							<p>Выделение объекта контроля из фона, либо раздельное восприятие двух объектов контроля, расположенных на растоянии друг от друга, соизмеримом с их размерами.</p>
+						</div>
+						<div class="modal__text">
+							<h2>Распознание</h2>
+							<p>Определение личности знакомого человека по поступающему с видеокамеры изображению.</p>
+						</div>
+						<div class="modal__text">
+							<h2>Идентификация</h2>
+							<p>Автоматическое определение личности незнакомого человека по алгоритму идентификации отдельных черт с имеющимся в базе данных изображением.</p>
+						</div>
+					</div>
+					<div class="modal-slider__item">
+						<h1 class="modal__title title">задачи видеонаблюдения</h1>
+						<img src="img/glossary-modal-1.jpg" alt="" aria-hidden="true">
+						<div class="modal__text">
+							<h2>Обнаружение</h2>
+							<p>Выделение объекта контроля из фона, либо раздельное восприятие двух объектов контроля, расположенных на растоянии друг от друга, соизмеримом с их размерами.</p>
+						</div>
+						<div class="modal__text">
+							<h2>Распознание</h2>
+							<p>Определение личности знакомого человека по поступающему с видеокамеры изображению.</p>
+						</div>
+						<div class="modal__text">
+							<h2>Идентификация</h2>
+							<p>Автоматическое определение личности незнакомого человека по алгоритму идентификации отдельных черт с имеющимся в базе данных изображением.</p>
+						</div>
+					</div>
+				</div>
+      </div>
+    </div>
+    <div class="modal" data-target="testimonials-slider">
+      <div class="modal-container">
+        <div class="modal-close"></div>
+        <button class="slick-next slick-arrow modal-slider__arrow"><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="32.5px" height="37.5px"><path fill-rule="evenodd"  stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"d="M15.994,36.481 L0.496,27.484 L0.496,9.490 L15.994,0.494 L31.492,9.490 L31.492,27.484 L15.994,36.481 Z"/></svg><i><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="7px" height="14px"><path fill-rule="evenodd"  fill="rgb(28, 58, 106)"d="M6.575,12.864 L1.186,6.995 L6.575,1.126 L6.053,0.559 L0.131,6.995 L6.053,13.432 L6.575,12.864 Z"/></svg></i><div class="line"></div><div class="line"></div></button>
+        <button class="slick-prev slick-arrow modal-slider__arrow"><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="32.5px" height="37.5px"><path fill-rule="evenodd"  stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"d="M15.994,36.481 L0.496,27.484 L0.496,9.490 L15.994,0.494 L31.492,9.490 L31.492,27.484 L15.994,36.481 Z"/></svg><i><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="7px" height="14px"><path fill-rule="evenodd"  fill="rgb(28, 58, 106)"d="M6.575,12.864 L1.186,6.995 L6.575,1.126 L6.053,0.559 L0.131,6.995 L6.053,13.432 L6.575,12.864 Z"/></svg></i><div class="line"></div><div class="line"></div></button>
+				<div class="modal-slider">
+					<div class="modal-slider__item first current">
+						<img src="img/testimonials-slider-1.jpg" alt="Отзыв">
+					</div>
+					<div class="modal-slider__item">
+						<img src="img/testimonials-slider-1.jpg" alt="Отзыв">
+					</div>
+				</div>
+      </div>
+    </div>
+    <div class="modal" data-target="sertificates-slider">
+      <div class="modal-container">
+        <div class="modal-close"></div>
+        <button class="slick-next slick-arrow modal-slider__arrow"><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="32.5px" height="37.5px"><path fill-rule="evenodd"  stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"d="M15.994,36.481 L0.496,27.484 L0.496,9.490 L15.994,0.494 L31.492,9.490 L31.492,27.484 L15.994,36.481 Z"/></svg><i><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="7px" height="14px"><path fill-rule="evenodd"  fill="rgb(28, 58, 106)"d="M6.575,12.864 L1.186,6.995 L6.575,1.126 L6.053,0.559 L0.131,6.995 L6.053,13.432 L6.575,12.864 Z"/></svg></i><div class="line"></div><div class="line"></div></button>
+        <button class="slick-prev slick-arrow modal-slider__arrow"><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="32.5px" height="37.5px"><path fill-rule="evenodd"  stroke="rgb(164, 186, 221)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"d="M15.994,36.481 L0.496,27.484 L0.496,9.490 L15.994,0.494 L31.492,9.490 L31.492,27.484 L15.994,36.481 Z"/></svg><i><svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="7px" height="14px"><path fill-rule="evenodd"  fill="rgb(28, 58, 106)"d="M6.575,12.864 L1.186,6.995 L6.575,1.126 L6.053,0.559 L0.131,6.995 L6.053,13.432 L6.575,12.864 Z"/></svg></i><div class="line"></div><div class="line"></div></button>
+				<div class="modal-slider">
+					<div class="modal-slider__item first current">
+						<img src="img/sertificates-1.jpg" alt="Сертификат">
+					</div>
+					<div class="modal-slider__item">
+						<img src="img/sertificates-2.jpg" alt="Сертификат">
+					</div>
+					<div class="modal-slider__item">
+						<img src="img/sertificates-3.jpg" alt="Сертификат">
+					</div>
+					<div class="modal-slider__item">
+						<img src="img/sertificates-4.jpg" alt="Сертификат">
+					</div>
+
+				</div>
+      </div>
+    </div>
 	</main>
 	<footer class="footer d-flex justify-content-center align-items-center">
 		<span class="footer__item">Все права защищены | 2019</span>
-		<span class="footer__item"><a href="politics.html">Политика конфиденциальности</a></span>
-		<span class="footer__item"><a href="politics.html">Обработка персональных данных</a></span>
+		<span class="footer__item"><a href="documents/policy.html" target="_blank">Политика конфиденциальности</a></span>
+		<span class="footer__item"><a href="documents/personal.html" target="_blank">Обработка персональных данных</a></span>
 	</footer>
 	<script src="script/jquery.js"></script>
 	<script src="script/slick.min.js"></script>
