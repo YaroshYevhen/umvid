@@ -209,6 +209,16 @@
   bottom: -50%;
   transform: translateY(-50%);
 }
+@keyframes fade-out {
+  from {opacity: 1}
+  to {opacity: 0}
+}
+.slick-prev.disabled,
+.slick-next.disabled {
+  pointer-events: none;
+  animation: fade-out .3s ease;
+  opacity: 0;
+}
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
 {

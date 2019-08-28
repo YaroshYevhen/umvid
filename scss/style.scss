@@ -1680,6 +1680,12 @@ body.menu {
   		width: 420px;
   	}
   }
+  &[data-target="sertificates-slider"],
+  &[data-target="testimonials-slider"] {
+  	.modal-container {
+  		background-color: transparent;
+  	}
+  }
   &-slider {
   	position: relative;
   	overflow: hidden;
@@ -1698,7 +1704,6 @@ body.menu {
 			& > img {
 		  	width: 570px;
 		  	max-width: 570px;
-		  	margin-bottom: 20px;
 		  }
   	}
   	&__arrow {
@@ -1739,6 +1744,7 @@ body.menu {
     }
     & + img {
     	margin-top: 35px;
+    	margin-bottom: 20px;
     }
   }
   &__text {
