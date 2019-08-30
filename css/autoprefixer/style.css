@@ -2311,6 +2311,10 @@ body.menu .hamburger {
   width: 420px;
 }
 
+.modal[data-target="sertificates-slider"] .modal-container, .modal[data-target="testimonials-slider"] .modal-container {
+  background-color: transparent;
+}
+
 .modal-slider {
   position: relative;
   overflow: hidden;
@@ -2346,7 +2350,6 @@ body.menu .hamburger {
 .modal-slider__item > img {
   width: 570px;
   max-width: 570px;
-  margin-bottom: 20px;
 }
 
 .modal-slider__arrow {
@@ -2396,6 +2399,7 @@ body.menu .hamburger {
 
 .modal__title + img {
   margin-top: 35px;
+  margin-bottom: 20px;
 }
 
 .modal__text {

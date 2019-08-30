@@ -216,9 +216,17 @@ APP.$document.ready(function() {
 				modal = $('.modal[data-target="' + attr + '"]'),
         order = $(this).attr('data-order');
 
+    if($(this).hasClass('services-item__more')) {
+      var title = $(this).parents('.services-item').find('.title-m').text(),
+          subtitle = $(this).parents('.services-item').find('.title-m + span').text(),
+          serviceNumber = $(this).data('service');
+
+      modal.find('.modal__text[data-service-' + serviceNumber + '="true"]').show();
+      modal.find('.modal__title').text(title);
+      modal.find('.modal__title + p').text(subtitle);
+    }
+    
     if($(this).hasClass('modal__btn')) {
-      var serviceName = $(this).parents('.modal-container').find('.modal__title').text();
-      modal.find('.modal__title + p').text('(' + serviceName + ')');
       closeModal();
     }
     

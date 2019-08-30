@@ -146,6 +146,7 @@
     cursor: pointer;
     color: #6d809f;
     background-color: transparent;
+    overflow: visible;
     transition: background .3s, color .3s;
 }
 

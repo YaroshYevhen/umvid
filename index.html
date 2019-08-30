@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<title>Системы видеонаблюдения</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 	<link rel="stylesheet" href="css/my-bootstrap.css">
 	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -123,7 +124,7 @@
 							</ul>
 						</div>
 						<p class="services-item__price text-center title">от <span>2990</span> р</p>
-						<button class="services-item__more text-center modal-btn" data-target="services"><span>Подробнее</span></button>
+						<button class="services-item__more text-center modal-btn" data-target="services" data-service="1"><span>Подробнее</span></button>
 					</div>
 					<div class="services-item js-animation d-flex flex-column">
 						<div class="services-item__title text-center">
@@ -151,7 +152,7 @@
 							</ul>
 						</div>
 						<p class="services-item__price text-center title">от <span>3990</span> р</p>
-						<button class="services-item__more text-center modal-btn" data-target="services"><span>Подробнее</span></button>
+						<button class="services-item__more text-center modal-btn" data-target="services" data-service="2"><span>Подробнее</span></button>
 					</div>
 					<div class="services-item js-animation d-flex flex-column">
 						<div class="services-item__title text-center">
@@ -179,7 +180,7 @@
 							</ul>
 						</div>
 						<p class="services-item__price text-center title">от <span>4990</span> р</p>
-						<button class="services-item__more text-center modal-btn" data-target="services"><span>Подробнее</span></button>
+						<button class="services-item__more text-center modal-btn" data-target="services" data-service="3"><span>Подробнее</span></button>
 					</div>
 					<div class="services-item js-animation d-flex flex-column">
 						<div class="services-item__title text-center">
@@ -207,7 +208,7 @@
 							</ul>
 						</div>
 						<p class="services-item__price text-center title">от <span>6990</span> р</p>
-						<button class="services-item__more text-center modal-btn" data-target="services"><span>Подробнее</span></button>
+						<button class="services-item__more text-center modal-btn" data-target="services" data-service="4"><span>Подробнее</span></button>
 					</div>
 				</div>
 				<p class="text-center">Ответьте на 5 простых вопросов и получите расчёт стоимости видеонаблюдения именно для вас</p>
@@ -488,13 +489,13 @@
 		<div class="modal" data-target="services">
       <div class="modal-container">
         <div class="modal-close"></div>
-					<h1 class="modal__title title">комплектация</h1>
-					<p class="text-center">(все регионы)</p>
+					<h1 class="modal__title title"></h1>
+					<p class="text-center"></p>
 					<div class="modal__text">
 						<h2>Продажа оборудования по всей России</h2>
 						<p>Стоимость оборудования соответствует цене и гарантийным обязательствам указанной на сайте производителя.</p>
 					</div>
-					<div class="modal__text">
+					<div class="modal__text" data-service-2="true" data-service-3="true">
 						<h2>Подготовка оборудования к самостоятельной установке</h2>
 						<ul>
 							<li>проверка/установка прошивок камер и регистратора</li>
@@ -503,11 +504,11 @@
 							<li>подготовка к отправке транспортной компанией (по всей России) или курьером (Москва и МО).</li>
 						</ul>
 					</div>
-					<div class="modal__text">
+					<div class="modal__text" data-service-3="true">
 						<h2>Настройка регистратора и камеры</h2>
 						<p>Старовый комплект - 5000 рублей, каждая дополнительная камера + 1000 руб. Пример: 8 камер и регистратор 5000+7*1000 = 12000  руб. </p>
 					</div>
-					<div class="modal__text">
+					<div class="modal__text" data-service-1="true" data-service-2="true" data-service-3="true">
 						<h2>Доставка</h2>
 						<p>500 рублей по Москве, + 30 рублей за 1 км от МКАД, либо оплата транспортной компании заказчиком при получении комплекта оплачивается дополнительно.</p>
 					</div>
@@ -522,7 +523,6 @@
       <div class="modal-container">
         <div class="modal-close"></div>
 					<h1 class="modal__title title">Бесплатная консультация</h1>
-					<p class="text-center"></p>
 					<input type="text" placeholder="Имя">
 					<input type="tel" placeholder="Телефон*" required>
 					<button class="modal__btn standart-btn mx-auto">заказать консультацию</button>

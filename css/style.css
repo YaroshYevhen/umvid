@@ -858,7 +858,7 @@ body.menu .hamburger {
 }
 
 .analitics__item:hover i {
-  background-image: -webkit-linear-gradient(90deg, #00c0ff 0%, #85ecd0 100%);
+  background-position: 100%;
 }
 
 .analitics__item:hover .analitics__tooltip {
@@ -951,10 +951,16 @@ body.menu .hamburger {
 }
 
 .analitics__icon i {
-  background-image: -webkit-linear-gradient(90deg, #85ecd0 0%, #00c0ff 100%);
+  background-image: -webkit-linear-gradient(left, #85ecd0 0%, #00c0ff 50%, #85ecd0 100%);
+  background-image: linear-gradient(to right, #85ecd0 0%, #00c0ff 50%, #85ecd0 100%);
   -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200%;
+  background-position: 0%;
   -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
   font-size: 43px;
+  transition: background .9s;
 }
 
 .analitics__icon::after {
@@ -1052,6 +1058,7 @@ body.menu .hamburger {
 
 .services-container {
   margin: 0 0 35px -15px;
+  width: 100%;
 }
 
 .services-container + p {
@@ -1958,6 +1965,7 @@ body.menu .hamburger {
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .modal-slider__item > img {
